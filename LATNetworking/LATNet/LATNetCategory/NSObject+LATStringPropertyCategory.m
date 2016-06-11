@@ -1,6 +1,6 @@
 //
 //  NSObject+LATStringPropertyCategory.m
-//  LATNetworking
+//  https://github.com/KKLater/LATNetWorking.git
 //
 //  Created by Later on 16/4/7.
 //  Copyright © 2016年 Later. All rights reserved.
