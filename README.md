@@ -1,6 +1,6 @@
 #LATNetworking	API介绍
 
-[TOC]
+一个基于`AFNetWorking`、`MJExtension`、`Reachability`的分布式和集中式网络请求组件的封装。
 
 ## 【实现功能】
 
