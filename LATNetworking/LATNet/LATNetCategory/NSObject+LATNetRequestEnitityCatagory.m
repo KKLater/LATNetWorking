@@ -20,7 +20,7 @@
 - (void)cancelRequest {
     [LATNetRequestAction cancelRequest:self];
 }
-- (void)setRequestDomainType:(LATNetDomainType)domainType serverName:(LATNetServerNameType)serverNameType {
+- (void)setRequestDomainType:(LATNetDomainType)domainType serverNameType:(LATNetServerNameType)serverNameType {
     self.requestDomainType = domainType;
     self.requestServerNameType = serverNameType;
 }

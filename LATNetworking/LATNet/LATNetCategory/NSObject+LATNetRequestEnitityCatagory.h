@@ -33,7 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) LATNetDomainType requestDomainType;
 /**
- *  @author Later, 16-04-06 11:04
  *
  *  网络请求的serverName
  */

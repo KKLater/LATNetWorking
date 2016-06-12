@@ -6,6 +6,7 @@
 
 * RequestEnitity不需要继承LATNetRequestEnitity类，直接继承NSObject。增加代码的复用性。
 * 去除LATNetRequestEnitity类，增加NSObject+LATNetMJExtensionCategory扩展，利用运行时动态配置各属性。
+* severName配置采用查表方法做配置，请求的BLL内设置LATNetSeverNameType类型来设置对应severName。
 
 ## 【实现功能】
 
@@ -107,7 +108,7 @@ RequestEnitity继承与NSObject，设置数据请求接口参数和协议参数
 
 * 设置数据请求接口参数
 
-  请求接口参数涉及到RequestDomain、severName等为必须设置项。其他为可选项设置。
+  请求接口参数涉及到RequestDomain、severNameType等为必须设置项。其他为可选项设置。
 
   ```objective-c
   /**
@@ -119,9 +120,9 @@ RequestEnitity继承与NSObject，设置数据请求接口参数和协议参数
   @property (nonatomic, assign) LATNetDomainType requestDomainType;
   /**
    *
-   *  网络请求的severName
+   *  网络请求的serverName
    */
-  @property (nonatomic, copy) NSString *requestServerName;
+  @property (assign, nonatomic) LATNetServerNameType requestServerNameType;
   //id
   @property (copy, nonatomic) NSString *id;
   ```
