@@ -35,9 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author Later, 16-04-06 11:04
  *
- *  网络请求的severName
+ *  网络请求的serverName
  */
-@property (nonatomic, copy) NSString *requestServerName;
+@property (assign, nonatomic) LATNetServerNameType requestServerNameType;
 /**
  *
  *  网络请求方式'GET'/'POST'/'HEAD'/'PATCH'/'PUT'/'DELETE'
@@ -119,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param domainType domainType
  *  @param serverName serverName
  */
-- (void)setRequestDomainType:(LATNetDomainType)domainType serverName:(NSString *)serverName;
+- (void)setRequestDomainType:(LATNetDomainType)domainType serverNameType:(LATNetServerNameType)serverNameType;
 
 @end
 NS_ASSUME_NONNULL_END

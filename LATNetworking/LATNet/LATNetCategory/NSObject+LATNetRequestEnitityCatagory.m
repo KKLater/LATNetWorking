@@ -20,9 +20,9 @@
 - (void)cancelRequest {
     [LATNetRequestAction cancelRequest:self];
 }
-- (void)setRequestDomainType:(LATNetDomainType)domainType serverName:(NSString *)serverName {
+- (void)setRequestDomainType:(LATNetDomainType)domainType serverName:(LATNetServerNameType)serverNameType {
     self.requestDomainType = domainType;
-    self.requestServerName = serverName;
+    self.requestServerNameType = serverNameType;
 }
 #pragma mark setter/getter
 /** requestDomainType */
@@ -33,11 +33,13 @@
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 /** requestServerName */
-- (void)setRequestServerName:(NSString *)requestServerName {
-    objc_setAssociatedObject(self, @selector(requestServerName), requestServerName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setRequestServerNameType:(LATNetServerNameType)requestServerNameType {
+    objc_setAssociatedObject(self, @selector(requestServerNameType), @(requestServerNameType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
 }
-- (NSString *)requestServerName {
-    return objc_getAssociatedObject(self, _cmd);
+- (LATNetServerNameType)requestServerNameType {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+    
 }
 /** requestMethodType */
 - (void)setRequestMethodType:(LATNetRequestMethodType)requestMethodType {
@@ -118,11 +120,7 @@
         NSString *domainString = [NSString stringWithFormat:@"%@",rootURL.absoluteString];
         
         /** ServerName */
-        if (!self.requestServerName) {
-            requestURLString = domainString;
-        } else {
-            requestURLString = [NSString stringWithFormat:@"%@%@",domainString,self.requestServerName];
-        }
+            requestURLString = [NSString stringWithFormat:@"%@%@",domainString,LATServerNameDic[self.requestServerNameType].serverName];
         objc_setAssociatedObject(self, _cmd, requestURLString, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return requestURLString;

@@ -13,7 +13,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.requestDomainType = LATDomainTypeDaXiang;
-        self.requestServerName = @"/api/v1_0/art/info";
+        self.requestServerNameType = LATNetServerNameTypeDaXiangNewsDetailInfo;
         self.requestMethodType = LATNetRequestMethodTypeGET;
         
         /*

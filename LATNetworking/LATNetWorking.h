@@ -29,6 +29,18 @@ static const LATNetDomainDic LATDomainDic[] = {
 typedef NS_ENUM(NSInteger, LATNetDomainType) {
     LATDomainTypeDaXiang      =   0
 };
+typedef struct _LATNetServerNameDic {
+    __unsafe_unretained NSString		*serverName;//serverName
+    
+}LATNetServerNameDic;
+static const LATNetServerNameDic LATServerNameDic[] = {
+    {@"/api/v1_0/art/info"},           //大象公会详情
+};
+
+typedef NS_ENUM(NSInteger, LATNetServerNameType) {
+    LATNetServerNameTypeDaXiangNewsDetailInfo = 0,            //新闻详情
+};
+
 #ifndef LATNetWorking_h
 #define LATNetWorking_h
 #import "LATNetReachability.h"
