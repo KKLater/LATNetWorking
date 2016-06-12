@@ -3,7 +3,7 @@
 //  https://github.com/KKLater/LATNetWorking.git
 //
 //  Created by Later on 16/3/19.
-//  Version 1.0.0
+//  Version 1.0.1
 //  Copyright © 2016年 Later. All rights reserved.
 //
 #import <Foundation/Foundation.h>
@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, LATNetDomainType) {
 #import "LATNetError.h"
 #import "LATFileManager.h"
 #import "UIApplication+LATNetCategory.h"
+#import "NSObject+LATNetRequestEnitityCatagory.h"
 
 
 #endif /* LATNetWorking_h */
@@ -59,7 +60,7 @@ typedef NS_ENUM(NSInteger, LATNetDomainType) {
 #endif
 
 #ifndef LAT_NET_VERSION
-#define LAT_NET_VERSION @"1.0.0"
+#define LAT_NET_VERSION @"1.0.1"
 #endif
 
 

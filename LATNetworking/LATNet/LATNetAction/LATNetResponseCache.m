@@ -8,13 +8,12 @@
 
 #import "LATNetResponseCache.h"
 #import "LATNetWorking.h"
-#import "LATNetRequestEnitity.h"
 #import "NSObject+LATStringPropertyCategory.h"
 #import <CommonCrypto/CommonDigest.h> // Need to import for CC_MD5 access
 
 @implementation LATNetResponseCache
 
-+ (id)responseCacheForRequest:(LATNetRequestEnitity *)request{
++ (id)responseCacheForRequest:(NSObject *)request{
     NSString *cacheKey = [self _lat_responseCacheKey:request];
     if (cacheKey) {
         NSObject * responseData;
@@ -33,7 +32,7 @@
     }
     return nil;
 }
-+ (void)cacheResponse:(NSObject<NSCoding> *)response forRequest:(LATNetRequestEnitity *)request{
++ (void)cacheResponse:(NSObject<NSCoding> *)response forRequest:(NSObject *)request{
     /** 默认存储策略是内存加磁盘 */
     switch (request.responseCacheType) {
         case LATNetCacheTypeMemoryAndDisk: {
@@ -56,7 +55,7 @@
  *  @return cacheKey
  */
 
-+ (NSString *)_lat_responseCacheKey:(LATNetRequestEnitity *)request {
++ (NSString *)_lat_responseCacheKey:(NSObject *)request {
     NSString *domain = request.requestURLString;
     NSDictionary * parameters = [request propertyStringDictionary];
     NSString *paramtersString = [request propertyStringWithPropertyDic:parameters];

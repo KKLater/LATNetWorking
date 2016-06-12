@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-@class LATNetRequestEnitity;
 NS_ASSUME_NONNULL_BEGIN
 @interface LATNetRequestAction : NSObject
 /**
@@ -23,14 +22,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param netBLL 数据请求体
  */
-+ (void)startRequest:(LATNetRequestEnitity *)request;
++ (void)startRequest:(NSObject *)request;
 /*!
  *
  *  根据请求体删除一个数据请求
  *
  *  @param netBLL 数据请求体
  */
-+ (void)cancelRequest:(LATNetRequestEnitity *)request;
++ (void)cancelRequest:(NSObject *)request;
 
 @end
 NS_ASSUME_NONNULL_END

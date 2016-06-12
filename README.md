@@ -1,6 +1,11 @@
-#LATNetworking	API介绍
+#LATNetworking	API介绍1.0.1
 
 一个基于`AFNetWorking`、`MJExtension`、`Reachability`的分布式和集中式网络请求组件的封装。
+
+## 【1.0.1版本更新】
+
+* RequestEnitity不需要继承LATNetRequestEnitity类，直接继承NSObject。增加代码的复用性。
+* 去除LATNetRequestEnitity类，增加NSObject+LATNetMJExtensionCategory扩展，利用运行时动态配置各属性。
 
 ## 【实现功能】
 
@@ -98,7 +103,7 @@ LATDomainDic与LATNetDomainType查表一一对应，数据请求使用前，必�
 
 #### 1.如何设置接口参数
 
-RequestEnitity继承与LATNetRequestEnitity，设置数据请求接口参数和协议参数
+RequestEnitity继承与NSObject，设置数据请求接口参数和协议参数
 
 * 设置数据请求接口参数
 
@@ -107,7 +112,7 @@ RequestEnitity继承与LATNetRequestEnitity，设置数据请求接口参数和�
   ```objective-c
   /**
    *
-   *  网络请求的domainType类型，设置位于LATNetSetting.h中
+   *  网络请求的domainType类型，设置位于LATNetWorking.h中
    *  用于获取网络请求的域名
    *  域名获取原理：NSString *netDomain = LATDomainDic[LATDomainTypeDaXiang].stringDomain;
    */

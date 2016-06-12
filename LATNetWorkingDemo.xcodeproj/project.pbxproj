@@ -41,7 +41,6 @@
 		544A93151D0C30C000B96A0C /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 544A92F61D0C30C000B96A0C /* NSObject+MJProperty.m */; };
 		544A93161D0C30C000B96A0C /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 544A92F81D0C30C000B96A0C /* NSString+MJExtension.m */; };
 		544A93171D0C30C000B96A0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 544A92FB1D0C30C000B96A0C /* Reachability.m */; };
-		54AA550E1D0C3C8200A8E867 /* LATNetRequestEnitity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA550D1D0C3C8200A8E867 /* LATNetRequestEnitity.m */; };
 		54AA55131D0C42F400A8E867 /* UIApplication+LATNetCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA55121D0C42F400A8E867 /* UIApplication+LATNetCategory.m */; };
 		54AA55731D0C674900A8E867 /* DaXiangDetailRequestBLL.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA55681D0C674900A8E867 /* DaXiangDetailRequestBLL.m */; };
 		54AA55741D0C674900A8E867 /* DaXiangDetailRequestEnitity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA556A1D0C674900A8E867 /* DaXiangDetailRequestEnitity.m */; };
@@ -49,6 +48,7 @@
 		54AA55761D0C674900A8E867 /* DaXiangDetailResponseBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA556E1D0C674900A8E867 /* DaXiangDetailResponseBodyModel.m */; };
 		54AA55771D0C674900A8E867 /* DaXiangDetailResponseEnitity.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA55701D0C674900A8E867 /* DaXiangDetailResponseEnitity.m */; };
 		54AA55781D0C674900A8E867 /* DaXiangDetailResponseHeadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AA55721D0C674900A8E867 /* DaXiangDetailResponseHeadModel.m */; };
+		54C1E35B1D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C1E35A1D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,8 +140,6 @@
 		544A92F81D0C30C000B96A0C /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		544A92FA1D0C30C000B96A0C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		544A92FB1D0C30C000B96A0C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		54AA550C1D0C3C8200A8E867 /* LATNetRequestEnitity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATNetRequestEnitity.h; sourceTree = "<group>"; };
-		54AA550D1D0C3C8200A8E867 /* LATNetRequestEnitity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LATNetRequestEnitity.m; sourceTree = "<group>"; };
 		54AA55111D0C42F400A8E867 /* UIApplication+LATNetCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+LATNetCategory.h"; sourceTree = "<group>"; };
 		54AA55121D0C42F400A8E867 /* UIApplication+LATNetCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+LATNetCategory.m"; sourceTree = "<group>"; };
 		54AA55671D0C674900A8E867 /* DaXiangDetailRequestBLL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaXiangDetailRequestBLL.h; sourceTree = "<group>"; };
@@ -157,6 +155,8 @@
 		54AA55711D0C674900A8E867 /* DaXiangDetailResponseHeadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaXiangDetailResponseHeadModel.h; sourceTree = "<group>"; };
 		54AA55721D0C674900A8E867 /* DaXiangDetailResponseHeadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaXiangDetailResponseHeadModel.m; sourceTree = "<group>"; };
 		54AA55791D0C6A0F00A8E867 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		54C1E3591D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LATNetRequestEnitityCatagory.h"; sourceTree = "<group>"; };
+		54C1E35A1D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LATNetRequestEnitityCatagory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +303,8 @@
 				544A92CC1D0C30C000B96A0C /* NSObject+LATStringPropertyCategory.m */,
 				54AA55111D0C42F400A8E867 /* UIApplication+LATNetCategory.h */,
 				54AA55121D0C42F400A8E867 /* UIApplication+LATNetCategory.m */,
+				54C1E3591D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.h */,
+				54C1E35A1D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.m */,
 			);
 			path = LATNetCategory;
 			sourceTree = "<group>";
@@ -314,8 +316,6 @@
 				544A92CF1D0C30C000B96A0C /* LATNetError.m */,
 				544A92D21D0C30C000B96A0C /* LATNetUploadFileData.h */,
 				544A92D31D0C30C000B96A0C /* LATNetUploadFileData.m */,
-				54AA550C1D0C3C8200A8E867 /* LATNetRequestEnitity.h */,
-				54AA550D1D0C3C8200A8E867 /* LATNetRequestEnitity.m */,
 			);
 			path = LATNetObject;
 			sourceTree = "<group>";
@@ -544,7 +544,6 @@
 				544A92FE1D0C30C000B96A0C /* LATNetReachability.m in Sources */,
 				544A93111D0C30C000B96A0C /* MJPropertyType.m in Sources */,
 				544A93031D0C30C000B96A0C /* NSObject+LATStringPropertyCategory.m in Sources */,
-				54AA550E1D0C3C8200A8E867 /* LATNetRequestEnitity.m in Sources */,
 				54AA55751D0C674900A8E867 /* DaXiangDetailResponseArticleModel.m in Sources */,
 				544A93161D0C30C000B96A0C /* NSString+MJExtension.m in Sources */,
 				544A930C1D0C30C000B96A0C /* AFURLSessionManager.m in Sources */,
@@ -571,6 +570,7 @@
 				54AA55771D0C674900A8E867 /* DaXiangDetailResponseEnitity.m in Sources */,
 				544A93071D0C30C000B96A0C /* AFHTTPSessionManager.m in Sources */,
 				544A93001D0C30C000B96A0C /* LATNetResponseCache.m in Sources */,
+				54C1E35B1D0CF455006F0B59 /* NSObject+LATNetRequestEnitityCatagory.m in Sources */,
 				544A92861D0C307A00B96A0C /* main.m in Sources */,
 				54AA55131D0C42F400A8E867 /* UIApplication+LATNetCategory.m in Sources */,
 			);

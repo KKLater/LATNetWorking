@@ -11,7 +11,7 @@
 #import "LATNetAFNRequestManager.h"
 #import "LATNetReachability.h"
 #import "LATNetResponseCache.h"
-#import "LATNetRequestEnitity.h"
+//#import "LATNetRequestEnitity.h"
 #import "NSObject+LATNetMJExtensionCategory.h"
 
 /**
@@ -62,7 +62,7 @@ static LATNetRequestAction *shareNetAction       = nil;
  *
  *  @param Request 数据请求体
  */
-+ (void)startRequest:(LATNetRequestEnitity *)request {
++ (void)startRequest:(NSObject *)request {
     NSParameterAssert(request);
     if (![LATNetReachability isReachable]) {
         LAT_Net_Log(@"网络连接失败");
@@ -77,7 +77,7 @@ static LATNetRequestAction *shareNetAction       = nil;
     [self _lat_startSingleRequest:request completionGroup:nil];
 }
 
-+ (void)_lat_startSingleRequest:(LATNetRequestEnitity *)requestEnitity completionGroup:(dispatch_group_t)completionGroup {
++ (void)_lat_startSingleRequest:(NSObject *)requestEnitity completionGroup:(dispatch_group_t)completionGroup {
     NSParameterAssert(requestEnitity);
     
     /** 取缓存 */
@@ -177,7 +177,7 @@ static LATNetRequestAction *shareNetAction       = nil;
         }
     }
 }
-+ (void)cancelRequest:(LATNetRequestEnitity *)request {
++ (void)cancelRequest:(NSObject *)request {
     dispatch_async(lat_net_task_creation_queue(), ^{
         NSString *hashKey = [@([request hash]) stringValue];
         NSURLSessionDataTask *dataTask = [[self shareAction].sessionTaskCache objectForKey:hashKey];
@@ -196,7 +196,7 @@ static LATNetRequestAction *shareNetAction       = nil;
  *  @param request      数据请求的requestEnitity
  *  @param responseData 数据请求返回结果
  */
-+ (void)_lat_requestSuccess:(LATNetRequestEnitity *)request responseData:(nullable id)responseData {
++ (void)_lat_requestSuccess:(NSObject *)request responseData:(nullable id)responseData {
     /** 空数据,直接返回 */
     if (!responseData) {
         [self _lat_requestFailure:request error:nil];
@@ -229,7 +229,7 @@ static LATNetRequestAction *shareNetAction       = nil;
  *  @param request 数据请求RequestEnitity
  *  @param error   数据请求失败error
  */
-+ (void)_lat_requestFailure:(LATNetRequestEnitity *)request error:(NSError *)error {
++ (void)_lat_requestFailure:(NSObject *)request error:(NSError *)error {
     //DO FAILURE
     NSString *errDescription = @"哎呀，你的请求已经走丢了...";
     if (error.code >= 300 && error.code <= 399) {
@@ -257,7 +257,7 @@ static LATNetRequestAction *shareNetAction       = nil;
  *  @param request  数据请求的RequestEnitity
  *  @param progress 数据请求进度
  */
-+ (void)_lat_requestProgress:(LATNetRequestEnitity *)request progress:(NSProgress *)progress {
++ (void)_lat_requestProgress:(NSObject *)request progress:(NSProgress *)progress {
     //DO PROGRESS
     dispatch_async(dispatch_get_main_queue(), ^{
         !request.LATRequestProgressBlock ?: request.LATRequestProgressBlock(progress);

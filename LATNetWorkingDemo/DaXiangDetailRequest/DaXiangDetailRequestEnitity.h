@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Later. All rights reserved.
 //
 
-#import "LATNetRequestEnitity.h"
+#import <Foundation/Foundation.h>
 
-@interface DaXiangDetailRequestEnitity : LATNetRequestEnitity
+@interface DaXiangDetailRequestEnitity : NSObject
 @property (copy, nonatomic) NSString *id;
 @end
